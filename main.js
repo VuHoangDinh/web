@@ -46,30 +46,24 @@ function showMovie(){
             var scheduleid = schedule.getElementsByTagName("TheatreID");
             var dd =  document.getElementById("dd");
             var value = dd.options[dd.selectedIndex].value;
-            var arr = new Array(1128693,1128666 )
             
+
             for (i=0;i< scheduleid.length; i ++){
-                if (value = scheduleid && scheduleid == Array.isArray(arr) )
-                {
-                    var info = scheduleid[i].innerHTML;
-                    
-                    var name =  schedule.getElementsByTagName("TheatreID")[i].innerHTML;
-                    /**var duration = scheduleid[i].parentNode.children[19].innerHTML;
-                    var theater = scheduleid[i].parentNode.children[29].innerHTML;
-                    var image  = scheduleid[i].parentNode.children[37].children[4].innerHTML;
-                    */
+                if (value = scheduleid){
+                    var name =  scheduleid[i].parentNode.children[15].innerHTML;
+                    var duration = scheduleid[i].parentNode.children[18].innerHTML;
+                    var theater = scheduleid[i].parentNode.children[27].innerHTML;
+                    var image  = scheduleid[i].parentNode.children[35].children[4].innerHTML;
                     scheduleid[i].parentNode.className = "hello";
                     var a = document.getElementsByClassName("hello");
 
                     var table = "<table>";
                     for (i=0; i<a.length;i++ ){
-                        
                         table += '<tr>'+'<td>' + name +'</td>';
                         table += '<td>' + duration + '</td>';
                         table += '<td>' + theater + '</td>';
                         table += '<td>' + image + '</td>' + '</tr>';
-                        
-                       
+
                     }
                     table += "</table>";
 
